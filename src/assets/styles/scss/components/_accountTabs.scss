@@ -1,0 +1,41 @@
+.accountTabs {
+  border: 1px solid $light-gray;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+  width: 44rem;
+  border-radius: 5px;
+  margin-bottom: 4rem;
+
+  &__item {
+    height: 4rem;
+    font-size: 1.4rem;
+    @include flex-center;
+    border-right: 1px solid $light-gray;
+    cursor: pointer;
+
+    &.active {
+      background-color: $primary-color;
+      color: #fff;
+    }
+
+    &:last-child {
+      border-right: none;
+      border-bottom-right-radius: 5px;
+      border-top-right-radius: 5px;
+    }
+    &:first-child {
+      border-bottom-left-radius: 5px;
+      border-top-left-radius: 5px;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .accountTabs {
+    width: 30rem;
+    &__item {
+      font-size: 1.2rem;
+    }
+  }
+}

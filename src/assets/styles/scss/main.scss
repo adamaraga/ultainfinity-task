@@ -1,0 +1,82 @@
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+@import "components/accountList";
+@import "components/accountCard";
+@import "components/accountStatus";
+@import "components/accountTabs";
+
+@import "pages/account";
+
+:root {
+  font-size: 62.5%;
+}
+
+*,
+::before,
+::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: $text-color;
+  margin: 0;
+  padding: 5rem 20%;
+  border-radius: 10px;
+  // margin-bottom: 5rem;
+  font-size: 1.6rem;
+  font-family: "Nunito", sans-serif;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: $primary-color;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+textarea,
+select {
+  color: $text-color;
+  font-family: Work Sans, sans-serif;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.noData {
+  margin: 5rem 0;
+  text-align: center;
+  color: rgb(137, 137, 137);
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    padding: 5rem 10%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  body {
+    padding: 5rem 0;
+  }
+}
